@@ -19,3 +19,7 @@
 ## How to Run Project
 
     java -jar client.jar
+    
+## How to Run Client in JS
+    
+    Run Server using java -jar server.jar, Run client.html and click on the "Connect Server" button to connect to the server
