@@ -1,18 +1,18 @@
 /* Setting the constants value for the image source */
-const BLINK = "../../ser516.project4/src/main/java/edu/ser516/project4/resources/images/blink.jpeg";
-const CLENCH = "../../ser516.project4/src/main/java/edu/ser516/project4/resources/images/clench.jpeg";
-const FURROW_BROW = "../../ser516.project4/src/main/java/edu/ser516/project4/resources/images/furrow_brow.jpeg";
-const LAUGH = "../../ser516.project4/src/main/java/edu/ser516/project4/resources/images/laugh.jpeg";
-const LOOK_LEFT = "../../ser516.project4/src/main/java/edu/ser516/project4/resources/images/look_left.jpeg";
-const LOOK_RIGHT = "../../ser516.project4/src/main/java/edu/ser516/project4/resources/images/look_right.jpeg";
-const NORMAL_LOWER = "../../ser516.project4/src/main/java/edu/ser516/project4/resources/images/normal_lower.jpeg";
-const NORMAL_UPPER = "../../ser516.project4/src/main/java/edu/ser516/project4/resources/images/normal_upper.jpeg";
-const RAISE_BROW = "../../ser516.project4/src/main/java/edu/ser516/project4/resources/images/raise_brow.jpeg";
-const SMILE = "../../ser516.project4/src/main/java/edu/ser516/project4/resources/images/smile.jpeg";
-const SMIRK_LEFT = "../../ser516.project4/src/main/java/edu/ser516/project4/resources/images/smirk_left.jpeg";
-const SMIRK_RIGHT = "../../ser516.project4/src/main/java/edu/ser516/project4/resources/images/smirk_right.jpeg";
-const WINK_LEFT = "../../ser516.project4/src/main/java/edu/ser516/project4/resources/images/wink_left.jpeg";
-const WINK_RIGHT = "../../ser516.project4/src/main/java/edu/ser516/project4/resources/images/wink_right.jpeg";
+const BLINK = "../../out/production/Project4_SER516/edu/ser516/project4/resources/images/blink.jpeg";
+const CLENCH = "../../out/production/Project4_SER516/edu/ser516/project4/resources/images/clench.jpeg";
+const FURROW_BROW = "../../out/production/Project4_SER516/edu/ser516/project4/resources/images/furrow_brow.jpeg";
+const LAUGH = "../../out/production/Project4_SER516/edu/ser516/project4/resources/images/laugh.jpeg";
+const LOOK_LEFT = "../../out/production/Project4_SER516/edu/ser516/project4/resources/images/look_left.jpeg";
+const LOOK_RIGHT = "../../out/production/Project4_SER516/edu/ser516/project4/resources/images/look_right.jpeg";
+const NORMAL_LOWER = "../../out/production/Project4_SER516/edu/ser516/project4/resources/images/normal_lower.jpeg";
+const NORMAL_UPPER = "../../out/production/Project4_SER516/edu/ser516/project4/resources/images/normal_upper.jpeg";
+const RAISE_BROW = "../../out/production/Project4_SER516/edu/ser516/project4/resources/images/raise_brow.jpeg";
+const SMILE = "../../out/production/Project4_SER516/edu/ser516/project4/resources/images/smile.jpeg";
+const SMIRK_LEFT = "../../out/production/Project4_SER516/edu/ser516/project4/resources/images/smirk_left.jpeg";
+const SMIRK_RIGHT = "../../out/production/Project4_SER516/edu/ser516/project4/resources/images/smirk_right.jpeg";
+const WINK_LEFT = "../../out/production/Project4_SER516/edu/ser516/project4/resources/images/wink_left.jpeg";
+const WINK_RIGHT = "../../out/production/Project4_SER516/edu/ser516/project4/resources/images/wink_right.jpeg";
 
 /* Updating the expressions of the face */
 function expressionChanger(data){
