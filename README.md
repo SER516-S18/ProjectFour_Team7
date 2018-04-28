@@ -20,9 +20,13 @@ USE JDK verion 1.9 TO RUN THE JAR
 
 ## How to Run Project
 
+    USE JDK verion 1.9 TO RUN THE JAR
+
     java -jar client.jar
     
 ## How to Run Client in JS
+
+    USE JDK verion 1.9 TO RUN THE JAR
     
     1. Run Client using java -jar client.jar
     2. Open EmoCOmposer by clicking on the "Open EmoComposer" button.
