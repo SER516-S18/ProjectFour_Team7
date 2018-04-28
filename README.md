@@ -22,4 +22,7 @@
     
 ## How to Run Client in JS
     
-    Run Server using java -jar server.jar, Run client.html and click on the "Connect Server" button to connect to the server
+    1. Run Client using java -jar client.jar
+    2. Open EmoCOmposer by clicking on the "Open EmoComposer" button.
+    3. Run client.html
+    4. Click on the "Connect Server" button to connect to the server
