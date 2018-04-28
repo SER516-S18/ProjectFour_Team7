@@ -19,5 +19,3 @@
 ## How to Run Project
 
     java -jar client.jar
-    
-<div style="color:red;font-size:1.5em;">Please compile the project before executing the jar.</div>
