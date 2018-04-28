@@ -15,6 +15,8 @@
 * Suman Parlapalli - 1213698107
 * Tejasi Palkar - 1213522854
 
+USE JDK verion 1.9 TO RUN THE JAR
+
 
 ## How to Run Project
 
