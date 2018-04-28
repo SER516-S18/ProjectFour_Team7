@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="../css/style.css">
+   <!--Importing jquery and bootstrap libraries-->   
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+      <!--Initializing the button colors-->
+	  <script type='text/javascript' > 
+        window.buttonSelected = "";
+        window.interestColor = "blue";
+        window.excitementColor = "grey";
+        window.engagementColor = "green";
+        window.stressColor = "red";
+        window.relaxationColor = "black";
+        window.focusColor = "orange";
+      </script>
+      <!-- CLient not in connected state initially -->
+      <script>
+        window.onload = function () {
+            $(".status").text("Not Connected");
+        }
+      </script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    
+  </head>
+    <body>
+	<!--div for the status of the server and timestamp of the client-->
+        <div class="outer-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm align-center">
+                        <!-- Connect Server Button -->
+                        <div>
+                            <button type="button" class="btn btn-secondary" id="connect-server">Connect Server</button>
+                        </div>
+                    </div>
+                    <div class="col-sm align-center">
+                        <p><span>Status:</span><span class="status" style="padding-left:10px">Not Connected</span></p>
+                    </div>
+                </div>
+                <hr>
+                <!-- Tabs for the Expressive and Performance suite -->
+                <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="pills-expressive-tab" data-toggle="pill" href="#pills-expressive" role="tab" aria-controls="pills-expressive" aria-selected="true">Expressive Suite</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="pills-performance-tab" data-toggle="pill" href="#pills-performance" role="tab" aria-controls="pills-performance" aria-selected="false">Performance Metrics</a>
+                  </li>
+                </ul>
+                <!-- Expressive suite tab contents -->
+                <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-expressive" role="tabpanel" aria-labelledby="pills-expressive-tab">
+                    <div class="row">
+                        <div class="col-sm-6 align-center">
+                                <img src="../../ser516.project4/src/main/java/edu/ser516/project4/resources/images/normal_upper.jpeg" alt="OOps" class="set-width" id="upper-face">
+                                <img src="../../ser516.project4/src/main/java/edu/ser516/project4/resources/images/normal_lower.jpeg" alt="OOps" class="set-width" id="lower-face">                         
+                        </div>
+                        <div class="col-sm-6">
+                            <div id="expressionChartContainer" style="vertical-align: middle;margin-top: 50px;"></div>                         
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Performance suite tab contents -->
+                  <div class="tab-pane fade align-center" id="pills-performance" role="tabpanel" aria-labelledby="pills-performance-tab">
+                      <div class="row">
+                        <div class="col-sm-6">
+                            <div id="chartContainer"></div>                      
+                        </div>
+                        <div class="col-sm-6">
+                        <div class="color-picker">
+                            
+                            <!--div for various performance metric emotions-->
+                            <div class="color-buttons">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" id="interest" data-toggle="modal" data-target="#exampleModal">
+                                    Interest
+                                </button>
+                                
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" id="excitement" data-toggle="modal" data-target="#exampleModal">
+                                    Excitement
+                                </button>
+                             </div>
+                                
+                            <div class="color-buttons">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" id="engagement" data-toggle="modal" data-target="#exampleModal">
+                                    Engagement
+                                </button>
+                                
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" id="stress" data-toggle="modal" data-target="#exampleModal">
+                                    Stress
+                                </button>
+                             </div>
+                                
+                            <div class="color-buttons">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" id="relaxation" data-toggle="modal" data-target="#exampleModal">
+                                    Relaxation
+                                </button>
+                                
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" id="focus" data-toggle="modal" data-target="#exampleModal">
+                                    Focus
+                                </button>
+                             </div>
+                                
+                                
+
+                                <!-- Modal for selecting the color-->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Select Color</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <div class="input-group mb-3">
+                                          <select class="custom-select" id="inputGroupSelect02">
+                                            <option value="blue">Blue</option>
+                                            <option value="grey">Grey</option>
+                                            <option value="green">Green</option>
+                                            <option value="red">Red</option>
+                                            <option value="black">Black</option>
+                                            <option value="orange">Orange</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" id="save" class="btn btn-primary">Save changes</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    <script type="text/javascript" src="../JS/graphPlotter.js"></script>
+    <script type="text/javascript" src="../JS/expressionChanger.js"></script>
+    <script type="text/javascript" src="../JS/serverConnect.js"></script>
+    <script type="text/javascript" src="../JS/colorPicker.js"></script>
+    </body>
+</html>
